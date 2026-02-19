@@ -3,8 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Innodent — Under Maintenance</title>
+
+  <title>Innodent | Specialized Dental Solutions & Manufacturing Korea</title>
+  <meta name="description" content="Innodent is a leading dental manufacturer in Korea, specializing in Gutta Percha Points and Dental Burs. High-quality endodontic and restorative dental supplies.">
+  <meta name="keywords" content="Innodent, Gutta Percha Point, Dental Burs, Korea Dental Manufacturer, Dental Supplies, Endodontics">
+  <link rel="canonical" href="https://innodent.company/" />
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://innodent.company/">
+  <meta property="og:title" content="Innodent | Specialized Dental Solutions">
+  <meta property="og:description" content="Leading dental manufacturing from Korea. Currently undergoing maintenance. Reach us for Gutta Percha Points and Dental Burs inquiries.">
+  <meta property="og:image" content="Asset_3.png">
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalOrganization",
+      "name": "Innodent",
+      "url": "https://innodent.company",
+      "logo": "https://innodent.company/Asset_3.png",
+      "description": "Specialized Dental Solutions & Manufacturing based in Korea.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+82-70-7576-4663",
+        "contactType": "customer service",
+        "areaServed": "Worldwide",
+        "availableLanguage": ["English", "Korean"]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "5F 514, 15, Haeyang 3-ro, Sangnok-gu",
+        "addressLocality": "Ansan-si",
+        "addressRegion": "Gyeonggi-do",
+        "addressCountry": "KR"
+      }
+    }
+  </script>
+
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+
   <style>
     :root {
       --white: #f9fbfc;
@@ -26,21 +63,19 @@
       overflow-x: hidden;
     }
 
-    /* background pattern */
     body::before {
       content: '';
       position: fixed;
       inset: 0;
       background:
-        radial-gradient(ellipse 70% 50% at 15% 20%, rgba(42,173,170,0.08) 0%, transparent 60%),
-        radial-gradient(ellipse 50% 60% at 85% 80%, rgba(26,125,123,0.07) 0%, transparent 60%),
-        repeating-linear-gradient(0deg, transparent, transparent 59px, var(--line) 59px, var(--line) 60px),
-        repeating-linear-gradient(90deg, transparent, transparent 59px, var(--line) 59px, var(--line) 60px);
+              radial-gradient(ellipse 70% 50% at 15% 20%, rgba(42,173,170,0.08) 0%, transparent 60%),
+              radial-gradient(ellipse 50% 60% at 85% 80%, rgba(26,125,123,0.07) 0%, transparent 60%),
+              repeating-linear-gradient(0deg, transparent, transparent 59px, var(--line) 59px, var(--line) 60px),
+              repeating-linear-gradient(90deg, transparent, transparent 59px, var(--line) 59px, var(--line) 60px);
       pointer-events: none;
       z-index: 0;
     }
 
-    /* layout */
     .page {
       position: relative;
       z-index: 1;
@@ -52,7 +87,6 @@
       padding: 60px 24px;
     }
 
-    /* logo */
     .logo-wrap {
       display: flex;
       flex-direction: column;
@@ -68,16 +102,18 @@
       filter: drop-shadow(0 2px 8px rgba(13,155,157,0.15));
     }
 
-    .logo-tagline {
-      font-size: 0.72rem;
-      letter-spacing: 0.35em;
-      text-transform: uppercase;
-      color: var(--silver);
-      font-weight: 400;
-      margin-top: -4px;
+    /* Screen-reader only H1 for SEO */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
     }
 
-    /* divider */
     .divider {
       width: 1px;
       height: 56px;
@@ -87,14 +123,13 @@
       animation: fadeUp 0.9s 0.25s ease forwards;
     }
 
-    /* maintenance text */
     .maintenance {
       text-align: center;
       opacity: 0;
       animation: fadeUp 0.9s 0.4s ease forwards;
     }
 
-    .maintenance h1 {
+    .maintenance h2 {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(1.5rem, 4vw, 2.4rem);
       font-weight: 400;
@@ -112,7 +147,6 @@
       margin: 0 auto;
     }
 
-    /* contact card */
     .contact-card {
       margin-top: 48px;
       background: rgba(255,255,255,0.78);
@@ -130,404 +164,191 @@
       animation: fadeUp 0.9s 0.6s ease forwards;
     }
 
-    .contact-item {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
+    .contact-item { display: flex; flex-direction: column; gap: 4px; }
 
     .contact-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
+      width: 36px; height: 36px; border-radius: 50%;
       background: var(--teal-faint);
       border: 1px solid rgba(26,125,123,0.18);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 8px;
-      flex-shrink: 0;
-    }
-    .contact-icon svg {
-      width: 16px;
-      height: 16px;
-      stroke: var(--teal);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 8px; flex-shrink: 0;
     }
 
-    .contact-text {
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-    }
-
-    .contact-label {
-      font-size: 0.65rem;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: var(--teal);
-      font-weight: 500;
-    }
-
-    .contact-value {
-      font-size: 0.875rem;
-      color: var(--ink);
-      font-weight: 300;
-      line-height: 1.55;
-    }
-    .contact-value a {
-      color: inherit;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
+    .contact-icon svg { width: 16px; height: 16px; stroke: var(--teal); }
+    .contact-text { display: flex; flex-direction: column; gap: 3px; }
+    .contact-label { font-size: 0.65rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--teal); font-weight: 500; }
+    .contact-value { font-size: 0.875rem; color: var(--ink); font-weight: 300; line-height: 1.55; }
+    .contact-value a { color: inherit; text-decoration: none; transition: color 0.2s; }
     .contact-value a:hover { color: var(--teal-light); }
 
-    /* PDF downloads */
     .downloads {
-      margin-top: 36px;
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      justify-content: center;
-      opacity: 0;
-      animation: fadeUp 0.9s 0.8s ease forwards;
+      margin-top: 36px; display: flex; gap: 16px;
+      flex-wrap: wrap; justify-content: center;
+      opacity: 0; animation: fadeUp 0.9s 0.8s ease forwards;
     }
 
     .pdf-btn {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 13px 22px;
-      border: 1px solid var(--teal);
-      border-radius: 2px;
-      color: var(--teal);
-      text-decoration: none;
-      font-size: 0.8rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      font-weight: 500;
-      background: transparent;
-      transition: color 0.25s, box-shadow 0.25s;
-      position: relative;
-      overflow: hidden;
+      display: flex; align-items: center; gap: 10px;
+      padding: 13px 22px; border: 1px solid var(--teal);
+      border-radius: 2px; color: var(--teal);
+      text-decoration: none; font-size: 0.8rem;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      font-weight: 500; position: relative; overflow: hidden;
     }
     .pdf-btn::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: var(--teal);
-      transform: translateX(-101%);
-      transition: transform 0.3s ease;
-      z-index: 0;
+      content: ''; position: absolute; inset: 0;
+      background: var(--teal); transform: translateX(-101%);
+      transition: transform 0.3s ease; z-index: 0;
     }
     .pdf-btn:hover::before { transform: translateX(0); }
     .pdf-btn:hover { color: white; box-shadow: 0 4px 20px rgba(26,125,123,0.25); }
     .pdf-btn svg, .pdf-btn span { position: relative; z-index: 1; }
 
-    /* footer */
     .footer {
-      margin-top: 52px;
-      font-size: 0.68rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--silver);
-      text-align: center;
-      opacity: 0;
-      animation: fadeUp 0.9s 1s ease forwards;
+      margin-top: 52px; font-size: 0.68rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--silver);
+      text-align: center; opacity: 0; animation: fadeUp 0.9s 1s ease forwards;
     }
 
-    /* corner accents */
     .corner { position: fixed; width: 48px; height: 48px; opacity: 0.35; }
     .corner--tl { top: 24px; left: 24px; border-top: 1.5px solid var(--teal); border-left: 1.5px solid var(--teal); }
     .corner--tr { top: 24px; right: 24px; border-top: 1.5px solid var(--teal); border-right: 1.5px solid var(--teal); }
     .corner--bl { bottom: 24px; left: 24px; border-bottom: 1.5px solid var(--teal); border-left: 1.5px solid var(--teal); }
     .corner--br { bottom: 24px; right: 24px; border-bottom: 1.5px solid var(--teal); border-right: 1.5px solid var(--teal); }
 
-    /* hourglass icon */
-    .hourglass-wrap {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
+    .hourglass-wrap { display: flex; justify-content: center; margin-bottom: 20px; }
+    .hourglass { width: 52px; height: 52px; position: relative; }
+    .hourglass-ring { position: absolute; inset: 0; border-radius: 50%; border: 1.5px solid rgba(13,155,157,0.25); animation: ringPulse 2.4s ease-in-out infinite; }
+    .hourglass-ring:nth-child(2) { inset: -8px; animation-delay: 0.4s; opacity: 0.5; }
+    .hourglass svg { width: 100%; height: 100%; position: relative; z-index: 1; animation: hourglassFlip 4.8s ease-in-out infinite; }
+    .sand-fill { animation: sandDrain 2.4s ease-in-out infinite; transform-origin: 50% 30%; }
 
-    .hourglass {
-      width: 52px;
-      height: 52px;
-      position: relative;
-    }
+    @keyframes hourglassFlip { 0%, 45% { transform: rotate(0deg); } 50%, 95% { transform: rotate(180deg); } 100% { transform: rotate(360deg); } }
+    @keyframes sandDrain { 0% { opacity: 1; transform: scaleY(1); } 45%, 50% { opacity: 0.1; transform: scaleY(0.05); } 55%, 100% { opacity: 1; transform: scaleY(1); } }
+    @keyframes ringPulse { 0%, 100% { transform: scale(1); opacity: 0.6; } 50% { transform: scale(1.18); opacity: 0; } }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
 
-    /* outer ring pulse */
-    .hourglass-ring {
-      position: absolute;
-      inset: 0;
-      border-radius: 50%;
-      border: 1.5px solid rgba(13,155,157,0.25);
-      animation: ringPulse 2.4s ease-in-out infinite;
-    }
-
-    .hourglass-ring:nth-child(2) {
-      inset: -8px;
-      animation-delay: 0.4s;
-      opacity: 0.5;
-    }
-
-    .hourglass svg {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* the sand drop inside the hourglass */
-    .sand-fill {
-      animation: sandDrain 2.4s ease-in-out infinite;
-      transform-origin: 50% 30%;
-    }
-
-    /* flip the whole hourglass */
-    .hourglass svg {
-      animation: hourglassFlip 4.8s ease-in-out infinite;
-    }
-
-    @keyframes hourglassFlip {
-      0%   { transform: rotate(0deg); }
-      45%  { transform: rotate(0deg); }
-      50%  { transform: rotate(180deg); }
-      95%  { transform: rotate(180deg); }
-      100% { transform: rotate(360deg); }
-    }
-
-    @keyframes sandDrain {
-      0%   { opacity: 1; transform: scaleY(1); }
-      45%  { opacity: 0.1; transform: scaleY(0.05); }
-      50%  { opacity: 0.1; transform: scaleY(0.05); }
-      55%  { opacity: 1; transform: scaleY(1); }
-      100% { opacity: 1; transform: scaleY(1); }
-    }
-
-    @keyframes ringPulse {
-      0%, 100% { transform: scale(1); opacity: 0.6; }
-      50%       { transform: scale(1.18); opacity: 0; }
-    }
-
-    /* animations */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(22px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ═══════════════════════════════
-       TABLET  (≤ 680px)
-    ═══════════════════════════════ */
-    @media (max-width: 680px) {
-      .contact-card {
-        padding: 28px 28px;
-        gap: 24px 28px;
-      }
-    }
-
-    /* ═══════════════════════════════
-       MOBILE  (≤ 480px)
-    ═══════════════════════════════ */
+    @media (max-width: 680px) { .contact-card { padding: 28px 28px; gap: 24px 28px; } }
     @media (max-width: 480px) {
-
-      /* spacing */
-      .page {
-        padding: 52px 16px 44px;
-        justify-content: flex-start;
-      }
-
-      /* logo */
+      .page { padding: 52px 16px 44px; justify-content: flex-start; }
       .logo-image { width: clamp(180px, 60vw, 280px); }
-      .logo-tagline { font-size: 0.62rem; letter-spacing: 0.22em; }
-
-      /* divider */
-      .divider { height: 32px; margin: 22px auto; }
-
-      /* maintenance text */
-      .maintenance p { font-size: 0.86rem; padding: 0 4px; }
-
-      /* contact card: single column with row-style items */
-      .contact-card {
-        grid-template-columns: 1fr;
-        padding: 4px 18px;
-        gap: 0;
-        margin-top: 28px;
-      }
-
-      .contact-item {
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 14px;
-        padding: 18px 0;
-        border-bottom: 1px solid rgba(26,125,123,0.09);
-      }
-      .contact-item:last-child {
-        border-bottom: none;
-      }
-
-      .contact-icon {
-        width: 42px;
-        height: 42px;
-        margin-bottom: 0;
-        margin-top: 1px;
-        flex-shrink: 0;
-      }
-      .contact-icon svg { width: 17px; height: 17px; }
-
-      .contact-label { font-size: 0.6rem; margin-bottom: 2px; }
-      .contact-value { font-size: 0.875rem; }
-
-      /* pdf buttons: full-width stacked */
-      .downloads {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 12px;
-        margin-top: 24px;
-        width: 100%;
-      }
-
-      .pdf-btn {
-        justify-content: center;
-        padding: 14px 16px;
-        font-size: 0.78rem;
-      }
-
-      /* footer */
-      .footer { margin-top: 36px; font-size: 0.6rem; letter-spacing: 0.13em; }
-
-      /* corners */
-      .corner { width: 26px; height: 26px; opacity: 0.2; }
-    }
-
-    /* ═══════════════════════════════
-       VERY SMALL PHONES  (≤ 360px)
-    ═══════════════════════════════ */
-    @media (max-width: 360px) {
-      .logo-name { letter-spacing: 0.1em; }
-      .contact-card { padding: 4px 12px; }
-      .contact-item { gap: 12px; }
+      .contact-card { grid-template-columns: 1fr; padding: 4px 18px; gap: 0; margin-top: 28px; }
+      .contact-item { flex-direction: row; align-items: flex-start; gap: 14px; padding: 18px 0; border-bottom: 1px solid rgba(26,125,123,0.09); }
+      .contact-item:last-child { border-bottom: none; }
+      .downloads { flex-direction: column; align-items: stretch; gap: 12px; width: 100%; }
+      .pdf-btn { justify-content: center; }
     }
   </style>
 </head>
 <body>
 
-  <div class="corner corner--tl"></div>
-  <div class="corner corner--tr"></div>
-  <div class="corner corner--bl"></div>
-  <div class="corner corner--br"></div>
+<div class="corner corner--tl"></div>
+<div class="corner corner--tr"></div>
+<div class="corner corner--bl"></div>
+<div class="corner corner--br"></div>
 
-  <main class="page">
+<main class="page">
 
-    <!-- Logo -->
-    <div class="logo-wrap">
-      <img src="Asset_3.png" alt="Innodent" class="logo-image"/>
+  <div class="logo-wrap">
+    <h1 class="sr-only">Innodent - Specialized Dental Solutions & Manufacturing Korea</h1>
+    <img src="Asset_3.png" alt="Innodent Logo" class="logo-image"/>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="maintenance">
+    <div class="hourglass-wrap">
+      <div class="hourglass">
+        <div class="hourglass-ring"></div>
+        <div class="hourglass-ring"></div>
+        <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="14" y="6" width="24" height="4" rx="2" fill="#0d9b9d" opacity="0.7"/>
+          <rect x="14" y="42" width="24" height="4" rx="2" fill="#0d9b9d" opacity="0.7"/>
+          <path d="M16 10 Q16 26 26 26 Q36 26 36 10" stroke="#0d9b9d" stroke-width="1.4" fill="rgba(26,125,123,0.06)"/>
+          <path d="M16 42 Q16 26 26 26 Q36 26 36 42" stroke="#0d9b9d" stroke-width="1.4" fill="rgba(26,125,123,0.06)"/>
+          <path class="sand-fill" d="M18.5 12 Q18.5 24 26 24 Q33.5 24 33.5 12 Z" fill="#1db5b7" opacity="0.55"/>
+          <path d="M18.5 40 Q18.5 28 26 28 Q33.5 28 33.5 40 Z" fill="#0d9b9d" opacity="0.25"/>
+          <circle cx="26" cy="26" r="1.5" fill="#1db5b7" opacity="0.8"/>
+        </svg>
+      </div>
+    </div>
+    <h2>We're Under Maintenance</h2>
+    <p>Our website is currently being updated to serve you better. We'll be back shortly. In the meantime, please reach us directly through the contact details below.</p>
+  </div>
+
+  <div class="contact-card">
+    <div class="contact-item">
+      <div class="contact-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="4" width="20" height="16" rx="2"/>
+          <polyline points="2,4 12,13 22,4"/>
+        </svg>
+      </div>
+      <div class="contact-text">
+        <span class="contact-label">Email</span>
+        <span class="contact-value"><a href="mailto:innodent.korea@gmail.com">innodent.korea@gmail.com</a></span>
+      </div>
     </div>
 
-    <div class="divider"></div>
-
-    <!-- Maintenance message -->
-    <div class="maintenance">
-      <div class="hourglass-wrap">
-        <div class="hourglass">
-          <div class="hourglass-ring"></div>
-          <div class="hourglass-ring"></div>
-          <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- outer frame -->
-            <rect x="14" y="6" width="24" height="4" rx="2" fill="#0d9b9d" opacity="0.7"/>
-            <rect x="14" y="42" width="24" height="4" rx="2" fill="#0d9b9d" opacity="0.7"/>
-            <!-- hourglass body outline -->
-            <path d="M16 10 Q16 26 26 26 Q36 26 36 10" stroke="#0d9b9d" stroke-width="1.4" fill="rgba(26,125,123,0.06)"/>
-            <path d="M16 42 Q16 26 26 26 Q36 26 36 42" stroke="#0d9b9d" stroke-width="1.4" fill="rgba(26,125,123,0.06)"/>
-            <!-- sand top (drains away) -->
-            <path class="sand-fill" d="M18.5 12 Q18.5 24 26 24 Q33.5 24 33.5 12 Z" fill="#1db5b7" opacity="0.55"/>
-            <!-- sand bottom (accumulates) -->
-            <path d="M18.5 40 Q18.5 28 26 28 Q33.5 28 33.5 40 Z" fill="#0d9b9d" opacity="0.25"/>
-            <!-- centre dot -->
-            <circle cx="26" cy="26" r="1.5" fill="#1db5b7" opacity="0.8"/>
-          </svg>
-        </div>
+    <div class="contact-item">
+      <div class="contact-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 11 19.79 19.79 0 0 1 1.61 2.38 2 2 0 0 1 3.58 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 7.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
       </div>
-      <h1>We're Under Maintenance</h1>
-      <p>Our website is currently being updated to serve you better. We'll be back shortly. In the meantime, please reach us directly through the contact details below.</p>
+      <div class="contact-text">
+        <span class="contact-label">Office Phone</span>
+        <span class="contact-value"><a href="tel:+827075764663">+82 70 7576 4663</a></span>
+      </div>
     </div>
 
-    <!-- Contact card -->
-    <div class="contact-card">
-
-      <div class="contact-item">
-        <div class="contact-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="4" width="20" height="16" rx="2"/>
-            <polyline points="2,4 12,13 22,4"/>
-          </svg>
-        </div>
-        <div class="contact-text">
-          <span class="contact-label">Email</span>
-          <span class="contact-value">
-    <a href="mailto:innodent.korea@gmail.com">innodent.korea@gmail.com</a>
-  </span>
-        </div>
+    <div class="contact-item">
+      <div class="contact-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+        </svg>
       </div>
-
-      <div class="contact-item">
-        <div class="contact-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 11 19.79 19.79 0 0 1 1.61 2.38 2 2 0 0 1 3.58 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 7.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
-          </svg>
-        </div>
-        <div class="contact-text">
-          <span class="contact-label">Office Phone</span>
-          <span class="contact-value"><a href="tel:+82707576 4663">+82 70 7576 4663</a></span>
-        </div>
+      <div class="contact-text">
+        <span class="contact-label">WhatsApp</span>
+        <span class="contact-value"><a href="https://wa.me/821055534663" target="_blank" rel="noopener">+82 10 5553 4663</a></span>
       </div>
+    </div>
 
-      <div class="contact-item">
-        <div class="contact-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
-          </svg>
-        </div>
-        <div class="contact-text">
-          <span class="contact-label">WhatsApp Business</span>
-          <span class="contact-value"><a href="https://wa.me/821055534663" target="_blank" rel="noopener">+82 10 5553 4663</a></span>
-        </div>
+    <div class="contact-item">
+      <div class="contact-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/>
+          <circle cx="12" cy="10" r="3"/>
+        </svg>
       </div>
-
-      <div class="contact-item">
-        <div class="contact-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/>
-            <circle cx="12" cy="10" r="3"/>
-          </svg>
-        </div>
-        <div class="contact-text">
-          <span class="contact-label">Address</span>
-          <span class="contact-value">
+      <div class="contact-text">
+        <span class="contact-label">Address</span>
+        <span class="contact-value">
             5F 514, 15, Haeyang 3-ro<br/>
-            Sangnok-gu, Ansan-si<br/>
-            Gyeonggi-do, Korea
+            Sangnok-gu, Ansan-si, Korea
           </span>
-        </div>
       </div>
-
     </div>
+  </div>
 
-    <!-- PDF Downloads -->
-    <div class="downloads">
-      <a href="https://drive.proton.me/urls/2NF1DN8HK4#Cmce4OymYtEJ" download class="pdf-btn">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-          <polyline points="14 2 14 8 20 8"/>
-          <line x1="12" y1="18" x2="12" y2="12"/>
-          <polyline points="9 15 12 18 15 15"/>
-        </svg>
-        <span>Gutta Percha Point</span>
-      </a>
-      <a href="https://drive.proton.me/urls/KNHHKC9X3M#orRhsAcdKouS" download class="pdf-btn">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-          <polyline points="14 2 14 8 20 8"/>
-          <line x1="12" y1="18" x2="12" y2="12"/>
-          <polyline points="9 15 12 18 15 15"/>
-        </svg>
-        <span>Dental Burs DA</span>
+  <div class="downloads">
+    <a href="https://drive.proton.me/urls/2NF1DN8HK4#Cmce4OymYtEJ" target="_blank" class="pdf-btn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/>
+      </svg>
+      <span>Gutta Percha Point</span>
+    </a>
+    <a href="https://drive.proton.me/urls/KNHHKC9X3M#orRhsAcdKouS" target="_blank" class="pdf-btn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/>
+      </svg>
+      <span>Dental Burs DA</span>
+    </a>
+  </div>
+
+  <footer class="footer">
+    &copy; 2026 Innodent. All rights reserved.
+  </footer>
+</main>
+</body>
+</html>
